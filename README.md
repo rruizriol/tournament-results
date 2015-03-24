@@ -1,4 +1,4 @@
-# tournament-results-database
+# tournament-results
 The Tournament Results project consists of a database schema to store the game matches between
 players. Also there is a Python module to rank the players and pair them up in matches in a 
 ournament.
