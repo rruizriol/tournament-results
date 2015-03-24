@@ -9,7 +9,7 @@ The application files are located inside the folder AppCode. In order to execute
 - Change your current directory to the folder <i><b>tournament-results-database/AppCode</b></i>
 - Execute the command <i><b>psql</b></i>
 - Inside Postgre execute the following commands in order to create the database
-    1. CREATE DATABASE tournament;
-    2. \i tournamen.sql
-    3. \q
+    1. <i><b>CREATE DATABASE tournament;</b></i>
+    2. <i><b>\i tournamen.sql</b></i>
+    3. <i><b>\q</b></i>
 - Execute this command <i><b>python tournament_test.py</b></i> in order to test the code
