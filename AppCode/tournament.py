@@ -15,8 +15,8 @@ def deleteMatches():
     DB = connect()        
     cursor = DB.cursor()
     
-    cursor.execute("DELETE FROM matches")
     cursor.execute("DELETE FROM match_players")
+    cursor.execute("DELETE FROM matches")
     
     DB.commit()
     DB.close()
