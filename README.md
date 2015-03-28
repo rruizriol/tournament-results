@@ -6,6 +6,6 @@ ournament.
 The application files are located inside the folder AppCode. In order to execute the application do the following
 - Download the repository
 - Open a command console
-- Change your current directory to the folder <i><b>tournament-results/AppCode</b></i>
-- Run <i><b>psql -f tournament.sql</b></i> in order to create the database
-- Run <i><b>python tournament_test.py</b></i> in order to test the code
+- Change your current directory to the folder ***tournament-results/AppCode***
+- Run ***psql -f tournament.sql*** in order to create the database
+- Run ***python tournament_test.py*** in order to test the code
