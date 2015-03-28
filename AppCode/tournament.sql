@@ -6,8 +6,14 @@
 -- You can write comments in this file by starting them with two dashes, like
 -- these lines here.
 
+-- Drop Dabase If exists
+DROP DATABASE IF EXISTS tournament;
+
+-- Connect to the database
+\c tournament
+
 -- Create Database
---CREATE DATABASE tournament;
+CREATE DATABASE tournament;
 
 --Create Tables
 CREATE TABLE players (
@@ -22,8 +28,8 @@ CREATE TABLE matches(
 
 CREATE TABLE match_players (
     id        serial CONSTRAINT match_players_key PRIMARY KEY,
-    match_id   integer NOT NULL DEFAULT 0,
-    player_id  integer  NOT NULL DEFAULT 0,
+    match_id   integer REFERENCES matches(id) NOT NULL DEFAULT 0,
+    player_id  integer  REFERENCES players(id) NOT NULL DEFAULT 0,
     score     real  NOT NULL DEFAULT 0
 );
 
@@ -34,4 +40,8 @@ CREATE VIEW player_standings AS
         ,(select count(id) from matches where winner = players.id) as wins
         ,(select count(id) from match_players where player_id = players.id) as matches
         FROM players;
+
+
+
+
 
