@@ -9,11 +9,11 @@
 -- Drop Dabase If exists
 DROP DATABASE IF EXISTS tournament;
 
--- Connect to the database
-\c tournament
-
 -- Create Database
 CREATE DATABASE tournament;
+
+-- Connect to the database
+\c tournament
 
 --Create Tables
 CREATE TABLE players (
@@ -40,6 +40,8 @@ CREATE VIEW player_standings AS
         ,(select count(id) from matches where winner = players.id) as wins
         ,(select count(id) from match_players where player_id = players.id) as matches
         FROM players;
+
+
 
 
 
